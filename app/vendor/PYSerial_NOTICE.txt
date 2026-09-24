@@ -1,0 +1,3 @@
+pySerial 3.5 is included with ATtiny85 Explorer for serial-port support.
+Project: https://github.com/pyserial/pyserial
+License: BSD-3-Clause. See pyserial-3.5.dist-info/LICENSE.txt in this folder.

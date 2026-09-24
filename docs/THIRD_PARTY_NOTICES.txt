@@ -1,0 +1,19 @@
+ATtiny85 Explorer v0.6.0 - Third-party notices
+================================================
+
+AVRDUDE 6.3-20190619 and its Windows companion libraries are taken from the
+official Arduino IDE 1.8.19 Windows ZIP distribution. AVRDUDE is free software
+distributed under the GNU General Public License, version 2 or later. Its
+upstream project and source information are available at:
+https://github.com/avrdudes/avrdude
+
+The complete AVRDUDE GPL text is included as vendor/avrdude-6.3/COPYING.txt.
+
+The bundled AVRDUDE files are included so the application can run without an
+Arduino IDE or separate AVRDUDE installation. Their integrity is checked at
+startup against SHA-256 values stored in the application.
+
+pySerial 3.5 is vendored under vendor/serial. See vendor/PYSerial_NOTICE.txt.
+
+PyInstaller is used only to assemble the Windows executable and is not required
+on destination computers.

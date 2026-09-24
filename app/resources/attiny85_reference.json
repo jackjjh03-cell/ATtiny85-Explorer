@@ -1,0 +1,105 @@
+{
+  "device": "ATtiny85",
+  "signature": "0x1E930B",
+  "part_id": "t85",
+  "flash_bytes": 8192,
+  "eeprom_bytes": 512,
+  "sram_bytes": 512,
+  "programmer_id": "usbtiny",
+  "known_good_backend": "AVRDUDE 6.3-20190619 from Arduino 1.8.19",
+  "factory_fuses": {
+    "lfuse": "0x62",
+    "hfuse": "0xDF",
+    "efuse": "0xFF",
+    "lock": "0xFF"
+  },
+  "fuse_notes": {
+    "active_low": true,
+    "CKDIV8": "LFUSE bit 7; programmed means divide the system clock by eight.",
+    "CKOUT": "LFUSE bit 6; programmed routes the system clock to PB4/CLKO.",
+    "SUT": "LFUSE bits 5:4; startup delay, interpreted with the selected clock source.",
+    "CKSEL": "LFUSE bits 3:0; clock source selection.",
+    "RSTDISBL": "HFUSE bit 7; programmed disables RESET and requires high-voltage serial programming for recovery.",
+    "DWEN": "HFUSE bit 6; programmed enables debugWIRE.",
+    "SPIEN": "HFUSE bit 5; programmed enables serial programming and is not writable through SPI ISP.",
+    "WDTON": "HFUSE bit 4; programmed forces watchdog-always-on behavior.",
+    "EESAVE": "HFUSE bit 3; programmed preserves EEPROM through chip erase.",
+    "BODLEVEL": "HFUSE bits 2:0; 111 disabled, 110 1.8 V, 101 2.7 V, 100 4.3 V.",
+    "SELFPRGEN": "EFUSE bit 0; programmed enables flash self-programming. EFUSE bits 7:1 must remain 1."
+  },
+  "lock_modes": {
+    "0xFF": "Mode 1: no memory lock features enabled.",
+    "0xFE": "Mode 2: further flash/EEPROM programming disabled and fuses locked.",
+    "0xFC": "Mode 3: further flash/EEPROM programming and verification disabled and fuses locked."
+  },
+  "speed_grades": {
+    "ATtiny85-20": {
+      "2.7-4.49V": "0-10 MHz",
+      "4.5-5.5V": "0-20 MHz"
+    },
+    "ATtiny85V-10": {
+      "1.8-2.69V": "0-4 MHz",
+      "2.7-5.5V": "0-10 MHz"
+    }
+  },
+  "guided_clock_presets": {
+    "factory_1mhz": {
+      "lfuse": "0x62",
+      "hfuse": "0xDF",
+      "efuse": "0xFF",
+      "f_cpu": "1000000UL",
+      "hardware": "none"
+    },
+    "internal_8mhz_preserve": {
+      "lfuse": "0xE2",
+      "hfuse": "0xD7",
+      "efuse": "0xFF",
+      "f_cpu": "8000000UL",
+      "hardware": "none"
+    },
+    "internal_pll_16mhz_5v_bod43_preserve": {
+      "lfuse": "0xC1",
+      "hfuse": "0xD4",
+      "efuse": "0xFF",
+      "f_cpu": "16000000UL",
+      "device": "ATtiny85-20",
+      "vcc": "4.5-5.5V",
+      "hardware": "no crystal; regulated supply and local decoupling"
+    },
+    "external_crystal_10mhz": {
+      "lfuse": "0xFF",
+      "hfuse": "0xD5",
+      "efuse": "0xFF",
+      "f_cpu": "10000000UL",
+      "vcc": "2.7-5.5V",
+      "hardware": "crystal on PB3/PB4 plus calculated load capacitors"
+    },
+    "external_crystal_16mhz": {
+      "lfuse": "0xFF",
+      "hfuse": "0xD4",
+      "efuse": "0xFF",
+      "f_cpu": "16000000UL",
+      "device": "ATtiny85-20",
+      "vcc": "4.5-5.5V",
+      "hardware": "crystal on PB3/PB4 plus calculated load capacitors"
+    },
+    "external_crystal_20mhz": {
+      "lfuse": "0xFF",
+      "hfuse": "0xD4",
+      "efuse": "0xFF",
+      "f_cpu": "20000000UL",
+      "device": "ATtiny85-20",
+      "vcc": "4.5-5.5V",
+      "hardware": "crystal on PB3/PB4 plus calculated load capacitors"
+    },
+    "external_clock_20mhz_pb3": {
+      "lfuse": "0xC0",
+      "hfuse": "0xD4",
+      "efuse": "0xFF",
+      "f_cpu": "20000000UL",
+      "device": "ATtiny85-20",
+      "vcc": "4.5-5.5V",
+      "hardware": "continuous logic clock on PB3/CLKI"
+    }
+  }
+}
